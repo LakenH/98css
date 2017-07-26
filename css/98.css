@@ -25,18 +25,17 @@ input {
 	font-size: 12px;
 }
 
-/* DESKTOP */
-.desktop {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 100%;
-	align-items: flex-start;
-	background-color: #008080;
-}
 
-/* WINDOWS */
-.window, .window-btn, .win98-btn {
+/* SHARED COMPONENT STYLES */
+
+.win98-btn, .start-btn, .window-btn {
+	cursor: pointer;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.window, .window-btn, .win98-btn, .start-btn {
 	background-color: #C0C0C0;
 	border-right: 2px solid #191919;
 	border-bottom: 2px solid #191919;
@@ -50,6 +49,21 @@ input {
 	border-top: 1px solid #F5F5F5;
 	border-left: 1px solid #F5F5F5;
 }
+.win98-btn:active, .window-btn:active, .start-btn:active {
+	border: 2px solid #3F3F3F;
+}
+
+/* DESKTOP */
+.desktop {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	align-items: flex-start;
+	background-color: #008080;
+}
+
+/* WINDOWS */
 .window {
 	margin: 5px;
 	display: inline-block;
@@ -119,17 +133,6 @@ input {
 	padding: 1px 5px;
 	min-width: 55px;
 	margin: 5px;
-	display: inline-block;
-	text-align: center;
-	cursor: pointer;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
-
-}
-.win98-btn:active, .window-btn:active {
-	border: 2px solid #3F3F3F;
 }
 .address-bar {
 	display: flex;
@@ -142,4 +145,48 @@ input {
 .address-bar input {
 	width: 100%;
 	margin: 1px;
+}
+
+/* TASKBAR & START MENU */
+.task-bar {
+	margin-top: auto;
+	height: 30px;
+	width: 100%;
+	background-color: #C0C0C0;
+	border-right: 2px solid #191919;
+	border-top: 2px solid #F5F5F5;
+	border-left: 2px solid #F5F5F5;
+
+	display: flex;
+	align-items: center;
+}
+.start-btn {
+	height: 23px;
+	display: flex;
+	font-weight: bold;
+	align-items: center;
+	margin: 0 2.5px;
+	min-width: 50px;
+}
+.start-btn img {
+	height: 80%;
+	padding: 1px;
+}
+.start-btn p {
+	padding-right: 3px;
+	font-size: 14px;
+}
+
+.tray {
+	margin-left: auto;
+	margin-right: 2.5px;
+	border-top: 2px solid #7B7B7B;
+	border-left: 2px solid #7B7B7B;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #FFF;
+	min-width: 55px;
+	height: 23px;
+	display: flex;
+	align-items: center;
+	padding: 0 5px;
 }
