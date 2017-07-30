@@ -66,6 +66,9 @@ input {
 .win98-btn:active, .window-btn:active, .start-btn:active {
 	border: 2px solid #3F3F3F;
 }
+.win98-btn, .window-btn, .start-btn {
+	text-align: center;
+}
 
 /* DESKTOP */
 .desktop {
