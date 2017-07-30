@@ -14,6 +14,29 @@ GNU General Public License v3.0
 	padding: 0;
 }
 
+/* TASKS */
+
+/* We need to make 98css' components to be more 'Windows-like' */
+.win98-btn, .start-btn, .window-btn, .window, .task-bar {
+	/* Disabling highlighting of 98css elements that have text */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+/* If browser highlighting behavior needs to be present for an element, the following class will allow it */
+.web-browser {
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	-webkit-user-select: auto;
+	user-select: auto;
+}
+/* Cursor needs to be changed to a pointer for buttons, menus, etc. */
+.win98-btn, .start-btn, .window-btn {
+	cursor: pointer;
+}
+
+
 /* GLOBAL GENERAL */
 html, body {
 	margin: 0;
@@ -25,16 +48,7 @@ input {
 	font-size: 12px;
 }
 
-
 /* SHARED COMPONENT STYLES */
-
-.win98-btn, .start-btn, .window-btn {
-	cursor: pointer;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
-}
 .window, .window-btn, .win98-btn, .start-btn {
 	background-color: #C0C0C0;
 	border-right: 2px solid #191919;
@@ -167,13 +181,21 @@ input {
 	align-items: center;
 	margin: 0 2.5px;
 	min-width: 50px;
+	position: relative;
 }
-.start-btn img {
-	height: 80%;
-	padding: 1px;
+.start-btn.win-icon::before {
+	content: "❖";
+	transform: rotate(45deg);
+	position: absolute;
+	left: -1px;
+	top: -2px;
+	font-size: 23px;
+}
+.start-btn.win-icon p {
+	padding-left: 19px;
 }
 .start-btn p {
-	padding-right: 3px;
+	padding: 0 4px;
 	font-size: 14px;
 }
 
