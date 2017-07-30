@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="css/98.css">
-</head>
-<body>
-<div class="desktop">
-	<div class="window">
-		<div class="window-title">
-			<img src="icons/app.ico" class="window-icon">
-			<p>Window Title</p>
-			<div class="window-actions">
-				<button class="window-btn minimize"></button>
-				<button class="window-btn maximize"></button>
-				<button class="window-btn close"></button>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Font Awesome is needed first if the optional icon classes are used -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/98.css">
+	</head>
+	<body>
+		<div class="desktop">
+			<div class="window">
+				<div class="window-title icon">
+					<p>98css.exe</p>
+					<div class="window-actions">
+						<button class="window-btn minimize"></button>
+						<button class="window-btn maximize"></button>
+						<button class="window-btn close"></button>
+					</div>
+				</div>
+				<div class="window-content">
+					<h4>98.css</h4>
+					<p>A CSS framework for hipsters.</p>
+					<a href="#" class="win98-btn">OK</a><a href="#" class="win98-btn">Cancel</a>
+				</div>
+			</div>
+
+			<div class="task-bar">
+				<a href="#" class="start-btn win-icon"><p>98css</p></a>
+
+				<div class="tray">
+					<p>12:00 AM</p>
+				</div>
 			</div>
 		</div>
-		<button class="win98-btn">I'm a button</button>
-		<a class="win98-btn">I'm a link</a>
-	</div>
-	<div class="window">
-		<div class="window-title">
-			<img src="icons/html.ico" class="window-icon">
-			<p>Internet Browser</p>
-			<div class="window-actions">
-				<button class="window-btn minimize"></button>
-				<button class="window-btn maximize"></button>
-				<button class="window-btn close"></button>
-			</div>
-		</div>
-		<div class="window-menu">
-			<ul>
-				<li>File</li>
-				<li>Edit</li>
-				<li>View</li>
-				<li>Go</li>
-				<li>Favorites</li>
-				<li>Help</li>
-			</ul>
-		</div>
-		<div class="address-bar">
-			<p>Address</p>
-			<input type="text" placeholder="https://laken.me" width="100%">
-		</div>
-		<iframe class="web-browser" src="https://laken.me" width="98%" height="100%"></iframe>
-	</div>
-	<div class="task-bar">
-		<a class="start-btn win-icon"><p>Start</p></a>
 
-		<div class="tray">
-			<p>12:00 AM</p>
-		</div>
-	</div>
-</div>
-
-</body>
+	</body>
 </html>
