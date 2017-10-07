@@ -99,16 +99,15 @@ input {
 	margin: 0;
 	font-size: 14px;
 }
-.window-title.icon::before {
+.window-title.app-icon::before {
 	position: absolute;
 	left: 3px;
 	top: 1.2px;
 	content: "";
 	font: normal normal normal 14px/1 FontAwesome;
 	color: white;
-	
 }
-.window-title.icon::after {
+.window-title.app-icon::after {
 	position: absolute;
 	content: "";
 	left: 1px;
@@ -116,13 +115,27 @@ input {
 	color: #595652;
 	font: normal normal normal 15px/1 FontAwesome;
 }
-.window-title.icon p {
+.window-title.app-icon p {
 	padding-left: 19px;
 }
-.window-icon {
-	height: 16px;
-	width: auto;
-	padding: 1px 2px 1px 4px;
+.window-title.internet-icon::before {
+	position: absolute;
+	left: 4px;
+	top: 1.2px;
+	content: "";
+	font: normal normal normal 14px/1 FontAwesome;
+	color: #FFF;
+}
+.window-title.internet-icon::after {
+	position: absolute;
+	left: .5px;
+	top: 3.5px;
+	content: "";
+	font: normal normal normal 11px/1 FontAwesome;
+	color: #3666F9;
+}
+.window-title.internet-icon p {
+	padding-left: 19px;
 }
 .window-btn {
 	line-height: 8px;
